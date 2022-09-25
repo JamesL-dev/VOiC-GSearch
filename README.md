@@ -7,6 +7,6 @@ GSearch is a system of "tags" users will add to their documents when uploaded to
 # Phase 1 Report
 
 # Authors
-[James Lasso](https://github.com/JamesL-dev/)
-[Dan Blanchette](https://github.com/Dan-Blanchette/)
-[Taylor Martin](https://github.com/Trmart/)
+[James Lasso](https://github.com/JamesL-dev/)<br>
+[Dan Blanchette](https://github.com/Dan-Blanchette/)<br>
+[Taylor Martin](https://github.com/Trmart/)<br>
