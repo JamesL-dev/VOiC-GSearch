@@ -3,3 +3,62 @@
   font-size: 48px;
   color: black;
 }
+.body {
+  background: #f3f5fa;
+  color: #444655;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444655;
+}
+
+.logo_image {
+  height: 2rem;
+}
+
+.document-images img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.banner-bg {
+  background-color: #444655;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #f3f5fa;
+  padding-right: 15px;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  color: #444655;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #a8aabc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.article-content {
+  margin-top: 0px;
+  white-space: pre-line;
+}
+
+.article-metadata {
+  margin-bottom: 6px;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}

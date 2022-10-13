@@ -27,7 +27,9 @@ from dash import html
 app = dash.Dash(
         __name__,
         title="gSearch: A VOiC extension",
-        external_stylesheets=[{
+        external_stylesheets=[
+            dbc.themes.BOOTSTRAP,
+            {
             "rel": "stylesheet",
             },
             ],
@@ -42,16 +44,38 @@ server = app.server
 # Page Layout
 #####################################################
 app.layout = html.Div(
-        children = [
-            html.H1(children = "gSearch!",
-            className="header-title",
+        [
+            # Navbar
+            dbc.Navbar(
+                dbc.Container(
+                    #logo Here
+                    dash.html.A(
+                        dbc.Row(
+                            [
+                                dbc.Col(dash.html.Img(
+                                    src="/assets/globe.png",
+                                    alt="VOiC",
+                                    className="logo_image",
+                                )),
+                                dbc.Col(dbc.NavbarBrand(
+                                    "Virtual Office in the Cloud",
+                                )),
+                            ],
+                            align="center",
+                            className="g-3",
+                        ),
+                        href="/",
+                        className="navbar-brand mr-4" ,
                     ),
-            html.P(
-                children="Build a premise graph and search the VOiC database.",
-                ),
-            ],
-            className="header",
-        )
+
+                    # Nav Links
+                )
+            ),
+            # Page Title
+            dash.html.H2("gSearch!"),
+
+        ],
+)
 #####################################################
 # Display page
 #####################################################
