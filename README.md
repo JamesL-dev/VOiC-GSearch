@@ -21,8 +21,9 @@ Project is built using Python `3.10.7` and Pip `22.2.2`
 #### Packages
 - 'dash'
 - 'dash-bootstrap-components'
+- 'dash-cytoscape'
 
 Use following command to install all packages:
 ```
-pip3 install dash dash-bootstrap-components
+pip3 install dash dash-bootstrap-components dash-cytoscape
 ```

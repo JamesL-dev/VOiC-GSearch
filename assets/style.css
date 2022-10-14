@@ -14,7 +14,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo_image {
-  height: 2rem;
+  height: 3.5rem;
+  padding-bottom: 5px;
 }
 
 .document-images img {

@@ -14,6 +14,7 @@ import sys
 # Installed packages
 import dash
 import dash_bootstrap_components as dbc
+import dash_cytoscape as cyto
 from dash import dcc
 from dash import html
 
@@ -41,38 +42,100 @@ server = app.server
 
 
 #####################################################
+# Componenets 
+#####################################################
+voic_logo = "/assets/globe.png"
+#####################################################
 # Page Layout
 #####################################################
 app.layout = html.Div(
         [
-            # Navbar
+            # NavBar
             dbc.Navbar(
                 dbc.Container(
-                    #logo Here
-                    dash.html.A(
-                        dbc.Row(
-                            [
-                                dbc.Col(dash.html.Img(
-                                    src="/assets/globe.png",
-                                    alt="VOiC",
-                                    className="logo_image",
-                                )),
-                                dbc.Col(dbc.NavbarBrand(
-                                    "Virtual Office in the Cloud",
-                                )),
-                            ],
-                            align="center",
-                            className="g-3",
-                        ),
-                        href="/",
-                        className="navbar-brand mr-4" ,
+                [
+                    html.A(
+                # Use row and col to control vertical alignment of logo / brand
+                    dbc.Row(
+                        [
+                            dbc.Col(html.Img(src=voic_logo, height="30px")),
+                            dbc.Col(dbc.NavbarBrand("Virtual Office In the Cloud", className="ms-2")),
+                        ],
+                        align="center",
+                        className="g-0",
+                ),
+                href="/",
+                style={"textDecoration": "none"},
                     ),
-
-                    # Nav Links
-                )
+                        dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
+                        dbc.Collapse(
+                        id="navbar-collapse",
+                        is_open=False,
+                        navbar=True,
+                        ),
+                ]
+                ),
+                color="dark",
+                dark=True,
             ),
-            # Page Title
-            dash.html.H2("gSearch!"),
+            dash.html.Div(
+            [
+                dbc.Row(
+                    [
+                        dbc.Col(
+                        [
+                            dash.html.Div(
+                            [
+                                cyto.Cytoscape(
+                                    id='cytoscape-left',
+                                    layout={'name': 'preset'},
+                                    style={'width': '50%', 'height': '400px'},
+                                    elements=[
+                                        {'data': {'id': 'one', 'label': 'Node 1'}, 'position': {'x': 75, 'y': 75}},
+                                        {'data': {'id': 'two', 'label': 'Node 2'}, 'position': {'x': 200, 'y': 200}},
+                                        {'data': {'source': 'one', 'target': 'two'}}
+                                    ],
+                                ),
+                            ],
+                            ),
+                        ],
+                        ),
+                        dbc.Col(
+                        [
+                            dash.html.Div(
+                            [
+                                cyto.Cytoscape(
+                                    id='cytoscape_right',
+                                    layout={'name': 'preset'},
+                                    style={'width': '50%', 'height': '400px'},
+                                    elements=[
+                                        {'data': {'id': 'one', 'label': 'Node 1'}, 'position': {'x': 75, 'y': 75}},
+                                        {'data': {'id': 'two', 'label': 'Node 2'}, 'position': {'x': 200, 'y': 200}},
+                                        {'data': {'source': 'one', 'target': 'two'}}
+                                    ],
+                                ),
+                            ],
+                            ),
+                        ],
+                        ),
+                    ],
+                ),
+                dbc.Row(
+                    [
+                        dbc.Col(dbc.Input(type="search", placeholder="Query Graph")),
+                        dbc.Col(
+                        dbc.Button(
+                        "Search", color="primary", className="ms-2", n_clicks=0
+                        ),
+                        width="auto",
+                        ),
+                        dbc.Col(""),
+                    ],
+                    className="g-0 ms-auto flex-nowrap mt-3 mt-md-0",
+                    align="left",
+                ),
+            ],
+            ),
 
         ],
 )
