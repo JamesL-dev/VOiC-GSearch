@@ -1,0 +1,14 @@
+digraph tree {
+	"initial child custody" [label="initial child custody", shape=circle]
+	"home section" [label="home section", shape=circle]
+	"virginia is home state" [label="virginia is home state", shape=circle]
+	"within 6 months" [label="within 6 months", shape=circle]
+	"fila is absent from virginia" [label="fila is absent from virginia", shape=circle]
+	"abebi lives in virginia" [label="abebi lives in virginia", shape=circle]
+
+	"initial child custody" -> "home section"
+	"home section" -> "virginia is home state"
+	"virginia is home state" -> "within 6 months"
+	"within 6 months" -> "fila is absent from virginia"
+	"fila is absent from virginia" -> "abebi lives in virginia"
+}
