@@ -13,13 +13,23 @@ def create_doc_dict():
 
    print("Creating document dictionary\n\n")
 
-   dict = {"abebi lives in virginia" : {'parent' : "fila is absent from virginia"}, 
-            "fila is absent from virginia" : {'parent' : "within 6 months"}, 
-            "within 6 months" : {'parent' : "virginia is home state"}, 
-            "virginia is home state" : {'parent' : "home section"},
+   # dict = {"abebi lives in virginia" : {'parent' : "fila is absent from virginia"}, 
+   #          "fila is absent from virginia" : {'parent' : "within 6 months"}, 
+   #          "within 6 months" : {'parent' : "virginia is home state"}, 
+   #          "virginia is home state" : {'parent' : "home section"},
+   #          "home section" : {'parent' : "initial child custody"},
+   #          "initial child custody" : {'parent' : None}
+   #       }
+
+   dict = {
+            "initial child custody" : {'parent' : None},
             "home section" : {'parent' : "initial child custody"},
-            "initial child custody" : {'parent' : None}
+            "virginia is home state" : {'parent' : "home section"},
+            "within 6 months" : {'parent' : "virginia is home state"}, 
+            "fila is absent from virginia" : {'parent' : "within 6 months"}, 
+            "abebi lives in virginia" : {'parent' : "fila is absent from virginia"}, 
          }
+   
    return dict
 
 if(__name__ == '__main__'):
