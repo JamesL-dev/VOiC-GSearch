@@ -1,0 +1,181 @@
+% Your .tex file
+
+%-----------------
+
+\documentclass[sigconf]{acmart}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage[ruled,vlined]{algorithm2e}
+
+\begin{document}
+
+
+%\fancyhead{}
+%\settopmatter{printacmref=false, printfolios=false}
+
+%IF NEED BE.
+% --- End of Author Metadata ---
+
+
+\title{VOiC: Virtual Office in the Cloud}
+% \titlenote{Any acknowledgment you may want to make.}
+% \subtitle{Extended Abstract}
+%\subtitlenote{The full version of the author's guide is available as
+%  \texttt{acmart.pdf} document}
+
+
+\author{Daniel Blanchette}
+\affiliation{%
+\institution{University of Idaho}
+%\streetaddress{875 Perimeter Drive}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+%  \postcode{83843}
+}
+\email{blan5568@vandals.uidaho.edu}
+
+\author{James Lasso}
+\affiliation{%
+\institution{University of Idaho}
+%\streetaddress{875 Perimeter Drive}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+%  \postcode{83843}
+}
+\email{lass2922@vandals.uidaho.edu}
+
+\author{Taylor Martin}
+\affiliation{%
+\institution{University of Idaho}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+}
+\email{lass2922@vandals.uidaho.edu}
+
+% The default list of authors is too long for headers}
+% \renewcommand{\shortauthors}{Your Name}
+\renewcommand{\shorttitle}{Short running title}
+
+\begin{abstract}
+In the world today, cloud computing technologies stand as an essential tool for both business and data storage.
+The COVID-19 pandemic highlighted the importance of such mediums, especially when faced with the challenges of working over long distances or due to mandatory isolation. Virtual Office in the Cloud(VOiC) endeavors to expand the accessibility and functionality that current document-sharing services provide. By utilizing isomorphic principles, our research into VOiC aspires to allow for visualized searches via AND/OR graph logic. We apply this style of search to compute a maximum tag match and generate a visualization of the graph. As part of future functionality, the system will allow justices to override a search. Other actors within the judicial system, will  be able to use the service to conduct restricted searches based on their job position and/or responsibilities to the courts.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10002952.10003190.10003192</concept_id>
+<concept_desc>Information systems~Database query processing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10003197.10010825</concept_id>
+<concept_desc>Information systems~Query languages for non-relational engines</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10002953.10010820</concept_id>
+<concept_desc>Information systems~Data model extensions</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10003197.10010822</concept_id>
+<concept_desc>Information systems~Relational database query languages</concept_desc>
+<concept_significance>100</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010179</concept_id>
+<concept_desc>Computing methodologies~Natural language processing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010187.10010196</concept_id>
+<concept_desc>Computing methodologies~Logic programming and answer set programming</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010405.10010444.10010450</concept_id>
+<concept_desc>Applied computing~Bioinformatics</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120</concept_id>
+<concept_desc>Human-centered computing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Database query processing}
+\ccsdesc[300]{Information systems~Data model extensions}
+\ccsdesc[100]{Information systems~Relational database query languages}
+\ccsdesc[500]{Computing methodologies~Natural language processing}
+\ccsdesc[500]{Computing methodologies~Logic programming and answer set programming}
+\ccsdesc[500]{Applied computing~Legal document searching and sorting}
+%\ccsdesc[500]{Human-centered computing}
+
+\keywords{Query mapping;
+cooperative query answering;
+implied query response;
+logical implication;
+query semantics}
+
+\maketitle
+
+\section{Introduction}
+As the world transitions toward a post-pandemic culture, remote work has proven to be a viable alternative means to conduct business and employ others regardless of location. All sectors of our economy benefited from this adjustment and as well as highlighted cloud computing as a dominant medium from which all types of work can be conducted. However, if the unthinkable were to happen again and social isolation became the norm, Virtual Office in the Cloud(VoiC) seeks to offer a means for legal departments to conduct business. This is achieved through  a robust sign-in/authentication system which allows for ranked officials to only access documents based on their positions within the court structure. With this functionality, justices will have the ability to override certain constraints within their purview. Prosecutors and attorneys will have permission to search for updated case files and find matches to other documents that relate to their case. In this way, VoiC seeks to accommodate both parties by returning the maximum search results and allowing both parties to discriminate between relevant and irrelevant information.
+\subsection{Contributions}
+In this paper, we propose adding the following functionality to the VoiC system:
+\begin{enumerate}
+    \item Implementing AND/OR graph search for document tags.
+    \item Sorting the search results by a maximum match for each tag.
+    \item Visualizing the AND/OR graph query results for the user.
+    \item Integrating the graph search with a front-end form that allows for restricted searches based on the user's ranking within a workplace hierarchy.
+\end{enumerate}
+\label{introduction}
+
+\section{Related Work}
+VoiC's initial prototype and features were contributed by Austin Kugler and Hayden Carroll while under the mentorship of their professional investigator Dr. Hasan Jamil. In this initial build, VoiC's functionality possessed the ability for a user to search, create, and share documents while being able to define permissions for each user. This body of work also created a means for user registration, sign-in, and editing of documents. The creation of a danger zone feature also allowed for the removal of all user documents or the entire user account. Their contribution provides a solid framework for us to implement our features for this project. 
+
+Dr. Jamil's research titled "A Semantic Query Engine for Knowledge Rich Legal Digital Libraries" also provided valuable details in what his proposed system's features will be. Many visualizations of the front-end environment and graph generation templates were used to guide this project and its features.
+\label{relatedwork}
+
+\section{Background}
+\subsection{Dash}
+Dash is a python framework created by Plotly which is used to create web applications. Dash is written with underlying integration from Flask, Plotly.js, and React.js. Dash allows for programmer flexibility as you don't have to learn HTML, CSS, and Javascript to create interactive dashboards, users only require some mastery in the python programming language. Dash is an open-source application and framework that is viewed on web browsers.
+\subsection{TreeLib}
+TreeLib is a python library that utilizes efficient functions for generation, searching, and traversal O(1).
+The library also allows for insertion, deletion, node moving, shallow/deep copying, subtree cutting, etc. TreeLib is compatible with Python 2 and Python 3.
+\subsection{GraphViz}
+GraphViz is a python package that facilitates the creation/rendering of graph descriptions. The package uses the DOT language of the Graphviz graph constructing software (upstream repo) from Python. Package features include: graph object generation, assembling a graph by adding nodes and edges, and retrieving its DOT source code string. Users can also save the source code to a file and render it with a Graphviz installation on the user's system.
+\label{background}
+
+\section{Environment Setup}
+\label{environmentsetup}
+
+\section{Components}
+\label{componenents}
+
+% code snippets and explanations go here
+\section{Structure}
+\label{structure}
+
+\section{User Interface}
+\label{userinterface}
+
+\section{Discussion}
+\label{discussion}
+
+\section{References}
+\label{references}
+
+\section{Conclusion}
+\label{conclusion}
+
+\end{document}
