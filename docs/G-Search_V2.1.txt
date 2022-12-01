@@ -1,0 +1,255 @@
+% Your .tex file
+
+%-----------------
+
+\documentclass[sigconf]{acmart}
+
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage{epsfig}
+\usepackage{color}
+\usepackage[ruled,vlined]{algorithm2e}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\acmConference[G-Search]{ACM Long Conference Name conference}{VoiC}{2022} 
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+
+
+%\fancyhead{}
+%\settopmatter{printacmref=false, printfolios=false}
+
+%IF NEED BE.
+% --- End of Author Metadata ---
+
+
+\title{VOiC: Virtual Office in the Cloud/G-Search}
+% \titlenote{Any acknowledgment you may want to make.}
+% \subtitle{Extended Abstract}
+%\subtitlenote{The full version of the author's guide is available as
+% \texttt{acmart.pdf}{document}
+
+
+\author{Daniel Blanchette}
+\affiliation{%
+\institution{University of Idaho}
+%\streetaddress{875 Perimeter Drive}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+%  \postcode{83843}
+}
+\email{blan5568@vandals.uidaho.edu}
+
+\author{James Lasso}
+\affiliation{%
+\institution{University of Idaho}
+%\streetaddress{875 Perimeter Drive}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+%  \postcode{83843}
+}
+\email{lass2922@vandals.uidaho.edu}
+
+\author{Taylor Martin}
+\affiliation{%
+\institution{University of Idaho}
+\city{Moscow}
+\state{Idaho}
+\country{USA}
+}
+\email{lass2922@vandals.uidaho.edu}
+
+% The default list of authors is too long for headers}
+% \renewcommand{\shortauthors}{Test Name}
+% \renewcommand{\shorttitle}{Short running title}
+
+\begin{abstract}
+In the world today, cloud computing technologies stand as an essential tool for both business and data storage.
+The COVID-19 pandemic highlighted the importance of such mediums, especially when faced with the challenges of working over long distances or due to mandatory isolation. Virtual Office in the Cloud(VOiC) endeavors to expand the accessibility and functionality that current document-sharing services provide. By utilizing isomorphic principles, our research into VOiC aspires to allow for visualized searches via AND/OR graph logic. We apply this style of search to compute a maximum tag match and generate a visualization of the graph. As part of future functionality, the system will allow justices to override a search. Other actors within the judicial system, will  be able to use the service to conduct restricted searches based on their job position and/or responsibilities to the courts.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002951.10002952.10003190.10003192</concept_id>
+<concept_desc>Information systems~Database query processing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10003197.10010825</concept_id>
+<concept_desc>Information systems~Query languages for non-relational engines</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10002953.10010820</concept_id>
+<concept_desc>Information systems~Data model extensions</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10002951.10002952.10003197.10010822</concept_id>
+<concept_desc>Information systems~Relational database query languages</concept_desc>
+<concept_significance>100</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010179</concept_id>
+<concept_desc>Computing methodologies~Natural language processing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010147.10010178.10010187.10010196</concept_id>
+<concept_desc>Computing methodologies~Logic programming and answer set programming</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10010405.10010444.10010450</concept_id>
+<concept_desc>Applied computing~Bioinformatics</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120</concept_id>
+<concept_desc>Human-centered computing</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Database query processing}
+\ccsdesc[300]{Information systems~Data model extensions}
+\ccsdesc[100]{Information systems~Relational database query languages}
+\ccsdesc[500]{Computing methodologies~Natural language processing}
+\ccsdesc[500]{Computing methodologies~Logic programming and answer set programming}
+\ccsdesc[500]{Applied computing~Legal document searching and sorting}
+%\ccsdesc[500]{Human-centered computing}
+
+\keywords{Query mapping;
+cooperative query answering;
+implied query response;
+logical implication;
+query semantics}
+
+\maketitle
+
+\section{Introduction}
+As the world transitions toward a post-pandemic culture, remote work has proven to be a viable alternative means to conduct business and employ others regardless of location. All sectors of our economy benefited from this adjustment and as well as highlighted cloud computing as a dominant medium from which all types of work can be conducted. However, if the unthinkable were to happen again and social isolation became the norm, Virtual Office in the Cloud(VoiC) seeks to offer a means for legal departments to conduct business. This is achieved through  a robust sign-in/authentication system which allows for ranked officials to only access documents based on their positions within the court structure. With this functionality, justices will have the ability to override certain constraints within their purview. Prosecutors and attorneys will have permission to search for updated case files and find matches to other documents that relate to their case. In this way, VoiC seeks to accommodate both parties by returning the maximum search results and allowing both parties to discriminate between relevant and irrelevant information.
+\subsection{Contributions}
+In this paper, we propose adding the following functionality to the VoiC system:
+\begin{enumerate}
+    \item Implementing AND/OR graph search for document tags.
+    \item Sorting the search results by a maximum match for each tag.
+    \item Visualizing the AND/OR graph query results for the user.
+    \item Integrating the graph search with a front-end form that allows for restricted searches based on the user's ranking within a workplace hierarchy.
+\end{enumerate}
+\label{introduction}
+
+\section{Related Work}
+ VoiC's initial prototype and features were contributed by Austin Kugler and Hayden Carroll\cite{voic}. In this initial build, VoiC's functionality was augmented to include a user search, account creation, and document sharing. Permissions for each user account were also defined as features of the VoiC system. The creation of a danger zone feature also allowed for the removal of all user documents or the entire user account. Their contribution provided a basic framework for us to implement our features for this project.
+\medskip
+
+Dr. Jamil's research titled "A Semantic Query Engine for Knowledge Rich Legal Digital Libraries"\cite{voichasan} also provided valuable details on what his proposed system's features road map is. Many visualizations and technical descriptions of the additional feature and a front-end environment were used to guide this project and its features for graph visualization and the user interface.
+\medskip
+
+Other research such as PloS ONE\cite{plos} seeks to automate and improve search results for meta-tags. Although this research is geared toward patent searches, it is relevant to our project as a possible method to implement tag searches and optimize the return of matched criteria. Legal documents and patents also share a commonality in that they both pertain to similar judicial search queries. Where PloS ONE verifies whether previously created artistry existed before a patent was issued, VoiC/G-Search verifies and returns documents from previous judicial cases to inform present cases. PloS ONE has a feature that we were interested in researching which was a mathematical means to compare tags and labels by the user for a query. The algorithm PLOS ONE uses compares and assigns cosine values to better evaluate the maximum match for relevancy.
+
+\label{relatedwork}
+
+\section{Background}
+\subsection{Dash}
+Dash is a python framework created by Plotly which is used to create web applications. Dash is written with underlying integration from Flask, Plotly.js, and React.js. Dash allows for programmer flexibility as you don't have to learn HTML, CSS, and Javascript to create interactive dashboards, users only require some mastery in the python programming language. Dash is an open-source application and framework that is viewed on web browsers.
+\subsection{TreeLib}
+TreeLib is a python library that utilizes efficient functions for generation, searching, and traversal O(1).
+The library also allows for insertion, deletion, node moving, shallow/deep copying, subtree cutting, etc. TreeLib is compatible with Python 2 and Python 3.
+\subsection{Graphviz Package}
+Graphviz is a python package that facilitates the creation/rendering of graph descriptions. The package uses the DOT language of the Graphviz graph constructing software (upstream repo) from Python. Package features include: graph object generation, assembling a graph by adding nodes and edges, and retrieving its DOT source code string. Users can also save the source code to a file and render it with a Graphviz installation on the user's system.
+\subsection{Graphviz Wrapper}
+Graphviz is open-source graph visualization software. Graph visualization is a method of representing structured information using diagrams of abstract graphs and networks. This application is frequently used in networking, data science, software engineering, database, and web design, machine learning, and visual interfaces for other technical applications
+\label{background}
+
+\section{Environment Setup}
+\subsection{Description}
+Initializing a software development environment for VOiC-GSEARCH has a few prerequisites before being able to install the dependencies. First, developers wanting to work on VOiC-GSEARCH will need to use a Unix-based operating system or subsystem. We decided to utilize a computer with a partitioned hard drive set up to dual boot with Linux and a computer with the Windows OS using Oracle VM Virtual Box. For the project, we decided to utilize Ubuntu ver 20.02. Second, software developers should install the Python programming language. We use python version 3.10, but VOiC-GSEARCH should be compatible with the most recent version of Python. Once those prerequisites are met, you are now able to start cloning the git repository and installing the dependencies. 
+\subsection{Cloning The Git Repository}
+In order to contribute to VOiC-GSEARCH you must clone the version control repository from the code hosting website GitHub. Open up a shell in your Linux system and type:
+\begin{lstlisting}[language = bash]
+$ git clone https://github.com/JamesL-dev/VOiC-GSearch.git
+\end{lstlisting}
+This will create a copy of the project's source code for your local environment. 
+\subsection{Installing The Dependencies}
+For the project, our team created a .txt file containing all of the dependencies and versions you need to contribute to and run the project. You can easily install all the dependencies for the project with Python's built-in pip package installer. In your shell run the command: 
+\begin{lstlisting}[language = bash]
+$ pip install -r requirements.txt
+\end{lstlisting}
+\subsection{Run The Dash Web Application}
+The installation of the VOiC-GSEARCH project and its dependencies are now finished. The website can be run and hosted locally on your machine by opening up a shell and typing the command:
+\begin{lstlisting}[language = bash]
+$ python3 run.py
+\end{lstlisting}
+
+\label{environmentsetup}
+
+\section{Components}
+\subsection{Overview}
+\subsection{Legal Document Data Submission}
+\subsection{Dictionary Generation}
+\subsection{AND/OR Semantic Graph Generation}
+\subsection{AND/OR Semantic Graph Visualization}
+\label{componenents}
+
+% code snippets and explanations go here
+\section{Structure}
+\subsection{gSearch.py}
+\subsection{doc\_data.py}
+\subsection{graph\_generator.py}
+The graph\_generator.py module
+\subsection{graph\_visualizer.py}
+
+\label{structure}
+
+\section{User Interface}
+\label{userinterface}
+
+\section{Discussion}
+\subsection{Overhead}
+The implementation we utilized has a noticeable overhead for our visualized graph search. This is due to the Python language being the basis for our prototype. However, the advantages and flexibility allotted by rapid prototyping with Python outweighed the time it would take to implement the project using another language. Thanks to this design choice, we could refactor our original project vision and improve the model to reflect the envisioned prototype's goals better. Optimization of the code should be a priority as work on this project continues. Many of the packages and libraries will noticeably tax current systems should the scale of the project's scope increase.
+\medskip
+
+\subsection{Future Work}
+With VoiC/G-Search, our implementation could not be entirely "tied" together before the due date. In the future, integration of the front-end and back-end code in Python and DASH could be added to the prototype. Re-factorization and optimization of the Python code implementation should be the next step. Also, the PloS ONE\cite{plos} method of assigning tag/label query values that identify a maximum match is an excellent approach to consider for future iterations of the VoiC/G-Search extension. With these values, the tag/label searching of legal documents would be an automated process and yield optimized return times for results and accuracy for the user. In addition, full implementation of the override functionality for justices should be added. This would allow those with authority to gain access to restricted documentation and the implementation of meta-tags that validate that level of limited access. 
+\label{discussion}
+
+\section{Conclusion}
+VoiC/G-Search is a robust method for users to visualize AND/OR graph data. The front end functionality of this extension also allows for restricted user searching based on judicial rank. The forms use the DASH framework for field entry and dynamic auto-completion of subsequent fields. Graphviz (package and wrapper) and TreeLib display the AND/OR query data as a graph and are used to calculate the maximum match for each meta-tag. We also proposed a related method for tag-matching calculations and values as referenced by the article PloS ONE\cite{plos}. Although presently independent of one another, the front end (DASH) and back end(Graphviz) will be tied together as part of a future iteration.
+\label{conclusion}
+
+% \section{References}
+% [1] Carroll, Hayden and Kugler, Austin 2022. \emph{VoiC: Virtual Office in the Cloud}(Undergraduate research project). University of Idaho, Moscow, Idaho, United States of America.
+
+% \noindent [2] Jamil, Hasan 20xx. \emph{A Semantic Query Engine for Knowledge Rich Legal Digital Libraries}. University of Idaho, Moscow, Idaho, United States of America.
+% \label{references}
+\medskip
+\bibliography{mybib.bib}
+\end{document}
