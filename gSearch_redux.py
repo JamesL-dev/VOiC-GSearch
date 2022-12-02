@@ -99,9 +99,10 @@ app.layout = html.Div(
                                 "Today's Date:"
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter todays date',
                                 type='text',
-                                value=''
+                                value='',
+                                id = 'current_date_value',
                             ),
                         ],
                         className="input_component",
@@ -137,9 +138,10 @@ app.layout = html.Div(
                                 "Child Name: "
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter child name',
                                 type='text',
-                                value=''
+                                value='',
+                                id='child_name_value',
                             ),
                         ],
                         className="input_component",
@@ -185,8 +187,12 @@ app.layout = html.Div(
                     dbc.Col(
                         dash.html.Div(
                         [
-                            dash.html.H5(
-                                f"Length of residence in {respondent_name} on {current_date}"
+                            dash.html.H5([
+                                "Length of residence in {respondent_name} on ",
+                                " on ",
+                                # Current date
+                                dash.html.Span(id="current_date_0"),
+                                ],
                             ),
                             dcc.Input(
                                 placeholder='Enter a value...',
@@ -416,17 +422,8 @@ app.layout = html.Div(
 )
 
 #####################################################
-# Display page
+# Callbacks for dynamic input
 #####################################################
-
-#@dash.callback(
-#        dash.Output("cytoscape", "children"),
-#        dash.State("dropdown", "value"),
-#)
-#update_nodes(data):
-#    if data is None:
-#        return no_update
-#    else:
 
 # This is for hidden dropdown options for jurisdtiction
 @app.callback(
@@ -441,7 +438,47 @@ def update_output(value):
     # return (value != "1"),(value != "2"),(value != "3"),(value != "4")
     return (value != "1")
 
-# This is for State filed
+# Todays date
+@app.callback(
+    dash.Output('current_date_0', 'children'),
+    dash.Input('current_date_value', 'value'),
+)
+def update_todays_date(current_date_value):
+    return current_date_value
+
+# Childs Name
+@app.callback(
+    dash.Output('child_name_0', 'children'),
+    dash.Input('child_name_value', 'value'),
+)
+def update_child_name(child_name_value):
+    return child_name_value
+
+# Parent1 / Claimant name
+@app.callback(
+    dash.Output('claimant_name_0', 'children'),
+    dash.Input('claimant_name_value', 'value'),
+)
+def update_claimant_name(claimant_name_value):
+    return claimant_name_value
+
+# Parent2 / Respondent Name
+@app.callback(
+    dash.Output('respondent_name_0', 'children'),
+    dash.Input('respondent_name_value', 'value'),
+)
+def update_respondent_name(respondent_name_value):
+    return respondent_name_value
+
+# Date case filed
+@app.callback(
+    dash.Output('date_case_filed_0', 'children'),
+    dash.Input('date_case_filed_value', 'value'),
+)
+def update_date_case_filed(date_case_filed_value):
+    return date_case_filed_value
+
+# State case filed
 @app.callback(
     dash.Output('state_case_file_0', 'children'),
     dash.Input('state_case_value', 'value'),
@@ -449,6 +486,57 @@ def update_output(value):
 def update_state_case_location(state_case_value):
     return state_case_value
 
+# Length of residence in {state}
+@app.callback(
+    dash.Output('length_of_residence_in_state_0', 'children'),
+    dash.Input('length_of_residence_in_state_value', 'value'),
+)
+def update_length_of_residence_in_state(length_of_residence_in_state_value):
+    return length_of_residence_in_state_value
+
+# Current residence state
+@app.callback(
+    dash.Output('current_residence_state_0', 'children'),
+    dash.Input('current_residence_state_value', 'value'),
+)
+def update_current_residence_state(current_residence_state_value):
+    return current_residence_state_value
+
+# Length of residence of {respondent_state} on {todays_date}
+@app.callback(
+    dash.Output('length_of_residence_respondent', 'children'),
+    dash.Input('length_of_residence_respondent_value', 'value'),
+)
+def update_length_of_residence_respondent(length_of_residence_respondent_value):
+    return length_of_residence_respondent_value
+
+# current residence state
+
+# Claimant residence state
+@app.callback(
+    dash.Output('claimant_residence_state_0', 'children'),
+    dash.Input('claimant_residence_state_value', 'value'),
+)
+def update_claimant_residence_state(claimant_residence_state_value):
+    return claimant_residence_state_value
+
+# Respondent residence state
+@app.callback(
+    dash.Output('respondent_residence_state_0', 'children'),
+    dash.Input('respondent_residence_state_value', 'value'),
+)
+def update_claimant_residence_state(respondent_residence_state_value):
+    return respondent_residence_state_value
+
+#most recent determination/modification by state
+@app.callback(
+    dash.Output('recent_determ_mod_state_0', 'children'),
+    dash.Input('recent_determ_mod_state_value', 'value'),
+)
+def update_recent_determ_mod(recent_determ_mod_state_value):
+    return recent_determ_mod_state_value
+
+# Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
     app.run_server(debug=True)
 
