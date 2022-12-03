@@ -1442,7 +1442,7 @@ app.layout = html.Div(
                 ],
             className="container-fluid border"
             ),
-
+            dash.html.Br(),
             
             dbc.Row([
                 dash.html.Div([
