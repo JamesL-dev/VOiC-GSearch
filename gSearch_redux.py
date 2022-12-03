@@ -21,6 +21,10 @@ from dash import html
 
 from collections import OrderedDict
 
+# Import lorem ipsum for filler text
+import lorem
+lorem_sentence = lorem.sentence()
+
 # Import pages here
 
 # TEMPORARY PLACEHOLDER VALUES
@@ -347,7 +351,7 @@ app.layout = html.Div(
                 dash.html.Br(),
                     dbc.Row([
                         dbc.Col([
-                            dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "NEED STATE VARIABLES HERE", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options'),
+                            dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "Michigan having initial modification jurisdiction determined Virginia", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options'),
                             html.Div(id='dd-output-container1'),
                         ]
                         ),
@@ -359,6 +363,7 @@ app.layout = html.Div(
 
                 # line break
                 dash.html.Br(),
+
                 dash.html.Div([
                     dbc.Row([
                         dbc.Col([
@@ -426,9 +431,1027 @@ app.layout = html.Div(
 
                 ],id="options1", hidden=True),
 
+                dash.html.Div([
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"a. Mississippi has exclusive, continued jurisdiction", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                # line break
+                dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"b. Mississippi declined jurisdiction in favor of Virginia", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                    dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"c. Fiia and Abebi have significant connection", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"d. Substantial evidence present in Virginia", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                ],id="options2", hidden=True),
+
+                dash.html.Div([
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                # line break
+                dash.html.B("OR", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"b. {claimant_current_residence} {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"i. {lorem_sentence} {current_date}", style={"margin-left":70}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                dash.html.B("AND", style={"margin-left":80}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"ii. {child_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                dash.html.B("AND", style={"margin-left":80}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"iii. {claimant_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                ],id="options3", hidden=True),
+
+                dash.html.Div([
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                # line break
+                dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"b. {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                    dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"c. {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                    dbc.Row([
+                        dbc.Col([
+                            dash.html.P(f"d. {lorem_sentence}", style={"margin-left":30}),
+                        ]
+                        ),
+                        dbc.Col([
+                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                        ],
+                        ),
+                    ]
+                    ),
+
+                ],id="options4", hidden=True),
+
                 ],
                 className="container-fluid border"
             ),   
+
+            dash.html.Div([
+                dash.html.Div(
+                    dash.html.H5("OR")
+                    ),
+                ],
+            className="container-fluid border"
+            ),
+            dash.html.Br(),
+
+            dash.html.Div([
+            # line break
+            dash.html.Br(),
+                dbc.Row([
+                    dbc.Col([
+                        dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "Michigan having initial modification jurisdiction determined Virginia", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options_2'),
+                        html.Div(id='dd-output-container2'),
+                    ]
+                    ),
+                    dbc.Col([
+                    ],
+                    ),
+                ],
+                ),
+
+            # line break
+            dash.html.Br(),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {claimant_current_residence} is home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} is previous home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. Within six months of {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} is absent from {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} lives in {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options5", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. Mississippi has exclusive, continued jurisdiction", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. Mississippi declined jurisdiction in favor of Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. Fiia and Abebi have significant connection", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. Substantial evidence present in Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options6", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. {lorem_sentence} {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options7", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options8", hidden=True),
+
+            ],
+            className="container-fluid border"
+        ),   
+
+            dash.html.Div([
+                dash.html.Div(
+                    dash.html.H5("OR")
+                    ),
+                ],
+            className="container-fluid border"
+            ),
+
+            dash.html.Div([
+            # line break
+            dash.html.Br(),
+                dbc.Row([
+                    dbc.Col([
+                        dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "Michigan having initial modification jurisdiction determined Virginia", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options_3'),
+                        html.Div(id='dd-output-container3'),
+                    ]
+                    ),
+                    dbc.Col([
+                    ],
+                    ),
+                ],
+                ),
+
+            # line break
+            dash.html.Br(),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {claimant_current_residence} is home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} is previous home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. Within six months of {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} is absent from {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} lives in {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options9", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. Mississippi has exclusive, continued jurisdiction", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. Mississippi declined jurisdiction in favor of Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. Fiia and Abebi have significant connection", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. Substantial evidence present in Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options10", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. {lorem_sentence} {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options11", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options12", hidden=True),
+
+            ],
+            className="container-fluid border"
+        ),   
+
+            dash.html.Div([
+                dash.html.Div(
+                    dash.html.H5("OR")
+                    ),
+                ],
+            className="container-fluid border"
+            ),
+
+            dash.html.Div([
+            # line break
+            dash.html.Br(),
+                dbc.Row([
+                    dbc.Col([
+                        dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "Michigan having initial modification jurisdiction determined Virginia", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options_4'),
+                        html.Div(id='dd-output-container4'),
+                    ]
+                    ),
+                    dbc.Col([
+                    ],
+                    ),
+                ],
+                ),
+
+            # line break
+            dash.html.Br(),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {claimant_current_residence} is home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} is previous home state", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. Within six months of {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} is absent from {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} lives in {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options13", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. Mississippi has exclusive, continued jurisdiction", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. Mississippi declined jurisdiction in favor of Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. Fiia and Abebi have significant connection", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. Substantial evidence present in Virginia", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options14", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("OR", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {claimant_current_residence} {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"i. {lorem_sentence} {current_date}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"ii. {child_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":80}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"iii. {claimant_name} {lorem_sentence} {claimant_current_residence}", style={"margin-left":70}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options15", hidden=True),
+
+            dash.html.Div([
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"a. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            # line break
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"b. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+                dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"c. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            dash.html.B("AND", style={"margin-left":40}),
+                dbc.Row([
+                    dbc.Col([
+                        dash.html.P(f"d. {lorem_sentence}", style={"margin-left":30}),
+                    ]
+                    ),
+                    dbc.Col([
+                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                    ],
+                    ),
+                ]
+                ),
+
+            ],id="options16", hidden=True),
+
+            ],
+            className="container-fluid border"
+        ),   
+
+            dash.html.Div([
+                dash.html.Div(
+                    dash.html.H5("OR")
+                    ),
+                ],
+            className="container-fluid border"
+            ),
+
+            
+            dbc.Row([
+                dash.html.Div([
+                    html.Button('Submit', id='btn-nclicks-1', n_clicks=0, className='btn-primary'),
+                ],
+                className="",
+                ),
+            ],
+            ),
             dash.html.Br(),
             ],
             className="container border",
@@ -440,18 +1463,49 @@ app.layout = html.Div(
 # Callbacks for dynamic input
 #####################################################
 
-# This is for hidden dropdown options for jurisdtiction
+# This is for hidden dropdown options for jurisdtiction 1
 @app.callback(
     dash.Output('options1', 'hidden'),
-#    dash.Output('options2', 'hidden'),
-#    dash.Output('options3', 'hidden'),
-#    dash.Output('options4', 'hidden'),
+    dash.Output('options2', 'hidden'),
+    dash.Output('options3', 'hidden'),
+    dash.Output('options4', 'hidden'),
     dash.Input('jurisdiction_options', 'value')
  )
 def update_output(value):
-    print(type(value))
-    # return (value != "1"),(value != "2"),(value != "3"),(value != "4")
-    return (value != "1")
+    return (value != "1"),(value != "2"),(value != "3"),(value != "4")
+
+# This is for hidden dropdown options for jurisdtiction options 2
+@app.callback(
+    dash.Output('options5', 'hidden'),
+    dash.Output('options6', 'hidden'),
+    dash.Output('options7', 'hidden'),
+    dash.Output('options8', 'hidden'),
+    dash.Input('jurisdiction_options_2', 'value')
+ )
+def update_output(value):
+    return (value != "1"),(value != "2"),(value != "3"),(value != "4")
+
+# This is for hidden dropdown options for jurisdtiction options 3
+@app.callback(
+    dash.Output('options9', 'hidden'),
+    dash.Output('options10', 'hidden'),
+    dash.Output('options11', 'hidden'),
+    dash.Output('options12', 'hidden'),
+    dash.Input('jurisdiction_options_3', 'value')
+ )
+def update_output(value):
+    return (value != "1"),(value != "2"),(value != "3"),(value != "4")
+
+# This is for hidden dropdown options for jurisdtiction options 4
+@app.callback(
+    dash.Output('options13', 'hidden'),
+    dash.Output('options14', 'hidden'),
+    dash.Output('options15', 'hidden'),
+    dash.Output('options16', 'hidden'),
+    dash.Input('jurisdiction_options_4', 'value')
+ )
+def update_output(value):
+    return (value != "1"),(value != "2"),(value != "3"),(value != "4")
 
 # Todays date
 @app.callback(
