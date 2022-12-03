@@ -114,13 +114,15 @@ app.layout = html.Div(
                         [
                             dash.html.H5([
                                 "Length of residence in ",
-                                dash.html.Span(id="state_case_file_0")
-                                
+                                dash.html.Span(id="state_case_file_0"),
+                                " on ",
+                                dash.html.Span(id="date_case_filed_0"),
                             ]),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter number of days',
                                 type='text',
-                                value=''
+                                value='',
+                                id='length_of_residence_in_case_and_file_date',
                             ),
                         ],
                         className="input_component",
@@ -157,7 +159,8 @@ app.layout = html.Div(
                             dcc.Input(
                                 placeholder='Enter a value...',
                                 type='text',
-                                value=''
+                                value='',
+                                id='current_residence_state_value'
                             ),
                         ],
                         className="input_component",
@@ -175,9 +178,10 @@ app.layout = html.Div(
                                 "Parent 1 Name (claimant): "
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter a name',
                                 type='text',
-                                value=''
+                                value='',
+                                id='claimant_name_value',
                             ),
                         ],
                         className="input_component",
@@ -188,16 +192,18 @@ app.layout = html.Div(
                         dash.html.Div(
                         [
                             dash.html.H5([
-                                "Length of residence in {respondent_name} on ",
+                                "Length of residence in ",
+                                dash.html.Span(id="current_residence_state_0"),
                                 " on ",
                                 # Current date
                                 dash.html.Span(id="current_date_0"),
                                 ],
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter number of days',
                                 type='text',
-                                value=''
+                                value='',
+                                id='length_of_residence_respondent_value'
                             ),
                         ],
                         className="input_component",
@@ -215,9 +221,10 @@ app.layout = html.Div(
                                 "Parent 2 Name (respondent): "
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter a name',
                                 type='text',
-                                value=''
+                                value='',
+                                id='respondent_name_value'
                             ),
                         ],
                         className="input_component",
@@ -227,13 +234,16 @@ app.layout = html.Div(
                     dbc.Col(
                         dash.html.Div(
                         [
-                            dash.html.H5(
-                                f"{claimant_name} residence: "
+                            dash.html.H5([
+                                dash.html.Span(id="claimant_name_0"),
+                                " residence: ",
+                                ],
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter a state',
                                 type='text',
-                                value=''
+                                value='',
+                                id='claimant_residence_state_value',
                             ),
                         ],
                         className="input_component",
@@ -251,9 +261,10 @@ app.layout = html.Div(
                                 "Date case filed: "
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter a date',
                                 type='text',
-                                value=''
+                                value='',
+                                id='date_case_filed_value',
                             ),
                         ],
                         className="input_component",
@@ -263,13 +274,16 @@ app.layout = html.Div(
                     dbc.Col(
                         dash.html.Div(
                         [
-                            dash.html.H5(
-                                f"{respondent_name} residence: "
+                            dash.html.H5([
+                                dash.html.Span(id="respondent_name_0"),
+                                " residence: "
+                                ], 
                             ),
                             dcc.Input(
-                                placeholder='Enter a value...',
+                                placeholder='Enter a state',
                                 type='text',
-                                value=''
+                                value='',
+                                id='respondent_residence_state_value',
                             ),
                         ],
                         className="input_component",
@@ -289,7 +303,7 @@ app.layout = html.Div(
                             dcc.Input(
                                 placeholder='Enter State',
                                 type='text',
-                                value='{state}',
+                                value='',
                                 id = 'state_case_value',
                             ),
                         ],
@@ -306,7 +320,8 @@ app.layout = html.Div(
                             dcc.Input(
                                 placeholder='Enter a value...',
                                 type='text',
-                                value=''
+                                value='',
+                                id='most_recent_determination_value',
                             ),
                         ],
                         className="input_component",
@@ -332,7 +347,7 @@ app.layout = html.Div(
                 dash.html.Br(),
                     dbc.Row([
                         dbc.Col([
-                            dcc.Dropdown({1: "Home State Jurisdiction", 2: "Blahblah", 3: "third option", 4: "fourth option"}, id='jurisdiction_options'),
+                            dcc.Dropdown({1: "Home State Jurisdiction", 2: "Exclusive continued jurisdiction", 3: "NEED STATE VARIABLES HERE", 4: "No court has jurisdiction subdivision 1, 2, or 3"}, id='jurisdiction_options'),
                             html.Div(id='dd-output-container1'),
                         ]
                         ),
@@ -502,13 +517,13 @@ def update_length_of_residence_in_state(length_of_residence_in_state_value):
 def update_current_residence_state(current_residence_state_value):
     return current_residence_state_value
 
-# Length of residence of {respondent_state} on {todays_date}
+# Length of residence in {case state} on {case filed date}
 @app.callback(
-    dash.Output('length_of_residence_respondent', 'children'),
-    dash.Input('length_of_residence_respondent_value', 'value'),
+    dash.Output('length_of_residence_in_case_and_file_date_0', 'children'),
+    dash.Input('length_of_residence_in_case_and_file_date_value', 'value'),
 )
-def update_length_of_residence_respondent(length_of_residence_respondent_value):
-    return length_of_residence_respondent_value
+def update_length_of_residence_respondent(length_of_residence_in_case_and_file_date_value):
+    return length_of_residence_in_case_and_file_date_value
 
 # current residence state
 
@@ -530,11 +545,11 @@ def update_claimant_residence_state(respondent_residence_state_value):
 
 #most recent determination/modification by state
 @app.callback(
-    dash.Output('recent_determ_mod_state_0', 'children'),
-    dash.Input('recent_determ_mod_state_value', 'value'),
+    dash.Output('most_recent_determ_mod_state_0', 'children'),
+    dash.Input('most_recent_determ_mod_state_value', 'value'),
 )
-def update_recent_determ_mod(recent_determ_mod_state_value):
-    return recent_determ_mod_state_value
+def update_recent_determ_mod(most_recent_determ_mod_state_value):
+    return most_recent_determ_mod_state_value
 
 # Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
