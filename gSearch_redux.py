@@ -371,7 +371,7 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span(' True ', className="text-danger"), "value": 'True'},{'label': 'True', "value": 'False'},{'label': 'True', "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
