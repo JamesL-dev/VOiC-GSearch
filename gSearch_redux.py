@@ -371,7 +371,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(options=[{'label': dash.html.Span(' True ', className="text-danger"), "value": 'True'},{'label': 'True', "value": 'False'},{'label': 'True', "value": 'Override'},], className="flex-grid"),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -385,7 +387,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -397,7 +401,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -410,7 +416,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -423,7 +431,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -438,7 +448,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -452,7 +464,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -465,7 +479,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -478,7 +494,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -493,7 +511,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -507,7 +527,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -519,7 +541,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -532,7 +556,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -545,7 +571,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -560,7 +588,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -574,7 +604,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -587,7 +619,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -600,7 +634,9 @@ app.layout = html.Div(
                         ]
                         ),
                         dbc.Col([
-                            dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                         ],
                         ),
                     ]
@@ -646,7 +682,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -660,7 +698,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -672,7 +712,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -685,7 +727,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -698,7 +742,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -713,7 +759,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -727,7 +775,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -740,7 +790,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -753,7 +805,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -768,7 +822,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -782,7 +838,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -794,7 +852,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -807,7 +867,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -820,7 +882,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -835,7 +899,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -849,7 +915,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -862,7 +930,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -875,7 +945,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -920,7 +992,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -934,7 +1008,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -946,7 +1022,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -959,7 +1037,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -972,7 +1052,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -987,7 +1069,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1001,7 +1085,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1014,7 +1100,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1027,7 +1115,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1042,7 +1132,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1056,7 +1148,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1068,7 +1162,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1081,7 +1177,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1094,7 +1192,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1109,7 +1209,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1123,7 +1225,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1136,7 +1240,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1149,7 +1255,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1194,7 +1302,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1208,7 +1318,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1220,7 +1332,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1233,7 +1347,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1246,7 +1362,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1261,7 +1379,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1275,7 +1395,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1288,7 +1410,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1301,7 +1425,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1316,7 +1442,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1330,7 +1458,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1342,7 +1472,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1355,7 +1487,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1368,7 +1502,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1383,7 +1519,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1397,7 +1535,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1410,7 +1550,9 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
+                            dcc.RadioItems(options=[{'label': dash.html.Span('True', className="text-success", style={"padding-right":20}), "value": 'True'},
+                                                    {'label': dash.html.Span('False', className="text-danger",style={"padding-right":20}), "value": 'False'},
+                                                    {'label': dash.html.Span("Override", className="text-primary"), "value": 'Override'},], className="flex-grid"),
                     ],
                     ),
                 ]
@@ -1423,7 +1565,6 @@ app.layout = html.Div(
                     ]
                     ),
                     dbc.Col([
-                        dcc.RadioItems(['True', 'False','Override'], 'False'),
                     ],
                     ),
                 ]
