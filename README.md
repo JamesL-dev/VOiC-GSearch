@@ -22,8 +22,15 @@ Project is built using Python `3.10.7` and Pip `22.2.2`
 - 'dash'
 - 'dash-bootstrap-components'
 - 'dash-cytoscape'
+- 'pandas'
+- 'treelib'
+- 'lorem'
+- 'graphviz'
+
+#### Graphviz
+[Graphviz install](https://www.graphviz.org/)<br>
 
 Use following command to install all packages:
 ```
-pip3 install dash dash-bootstrap-components dash-cytoscape
+pip3 install dash dash-bootstrap-components dash-cytoscape lorem pandas treelib graphviz
 ```
