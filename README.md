@@ -27,10 +27,17 @@ Project is built using Python `3.10.7` and Pip `22.2.2`
 - 'lorem'
 - 'graphviz'
 
-#### Graphviz
-[Graphviz install](https://www.graphviz.org/)<br>
 
 Use following command to install all packages:
 ```
 pip3 install dash dash-bootstrap-components dash-cytoscape lorem pandas treelib graphviz
 ```
+
+Or you can use pip to install all the packages from our reuirements.txt:
+```
+pip install -r requirements.txt
+```
+
+#### Graphviz
+After those packages are installed, You need to install the Graphviz graph generation software here:
+[Graphviz install](https://www.graphviz.org/)<br>
