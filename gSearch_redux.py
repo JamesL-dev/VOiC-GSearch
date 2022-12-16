@@ -1782,7 +1782,7 @@ def grab_input_states(initial_child_custody, home_section, state, claimant_name,
 """
 # Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
-    app.run_server(debug=True)
+    app.run_server(debug=False)
 
 if __name__ == "__main__":
     main()
