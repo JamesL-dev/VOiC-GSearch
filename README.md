@@ -38,6 +38,11 @@ Or you can use pip to install all the packages from our reuirements.txt:
 pip install -r requirements.txt
 ```
 
+Run this command to start server
+```
+python3 gSearch_redux.py
+```
+
 #### Graphviz
 After those packages are installed, You need to install the Graphviz graph generation software here:
 <br>
