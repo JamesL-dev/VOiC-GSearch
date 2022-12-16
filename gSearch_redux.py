@@ -1,6 +1,7 @@
 #####################################################
-# File: 
-# Description:      
+# File: gSearch.py
+# Description: Main driver for VOiC extension gSearch. 
+# This file contains site layout and dynamic form input
 #####################################################
 
 
