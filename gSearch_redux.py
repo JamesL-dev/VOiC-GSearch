@@ -11,6 +11,10 @@
 #####################################################
 # Built-in packages
 import sys
+import os
+
+# Path for backend
+sys.path.append(os.path.realpath("./backend_scripts"))
 
 # Installed packages
 import dash
@@ -25,6 +29,11 @@ from collections import OrderedDict
 # Import lorem ipsum for filler text
 import lorem
 lorem_sentence = lorem.sentence()
+
+# backend imports
+import graph_generator
+from doc_data import create_doc_dict as create_doc_dict
+from graph_visualizer import visualize_graph
 
 # Import pages here
 
@@ -1755,7 +1764,9 @@ def update_recent_determ_mod(most_recent_determ_mod_state_value):
     # dash.State('input-on-submit', 'value')
 )
 def update_output(btn1):
-    print("Print Taylors use case here")
+    graph_generator.main()
+    #and_or_doc_dict = create_doc_dict('and_or_dict')
+    #dict_to_tree(and_or_doc_dict, "and_or")
 
 # Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
