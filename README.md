@@ -40,4 +40,5 @@ pip install -r requirements.txt
 
 #### Graphviz
 After those packages are installed, You need to install the Graphviz graph generation software here:
+<br>
 [Graphviz install](https://www.graphviz.org/)<br>
