@@ -84,7 +84,7 @@ app.layout = html.Div(
                     dbc.Row(
                         [
                             dbc.Col(html.Img(src=voic_logo, height="30px")),
-                            dbc.Col(dbc.NavbarBrand("Virtual Office In the Cloud", className="ms-2")),
+                            dbc.Col(dbc.NavbarBrand("Virtual Office In the Cloud - gSearch", className="ms-2")),
                         ],
                         align="center",
                         className="g-0",
