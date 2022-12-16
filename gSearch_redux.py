@@ -1592,6 +1592,7 @@ app.layout = html.Div(
                 ],
                 className="",
                 ),
+                dash.html.Div(id='button_container', hidden=True)
             ],
             ),
             dash.html.Br(),
@@ -1746,6 +1747,15 @@ def update_claimant_residence_state(respondent_residence_state_value):
 )
 def update_recent_determ_mod(most_recent_determ_mod_state_value):
     return most_recent_determ_mod_state_value
+
+# Submit button functionality
+@app.callback(
+    dash.Output('button_container', 'children'),
+    dash.Input('btn-nclicks-1', 'n_clicks'),
+    # dash.State('input-on-submit', 'value')
+)
+def update_output(btn1):
+    print("Print Taylors use case here")
 
 # Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
