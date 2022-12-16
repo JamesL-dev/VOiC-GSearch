@@ -1768,6 +1768,18 @@ def update_output(btn1):
     #and_or_doc_dict = create_doc_dict('and_or_dict')
     #dict_to_tree(and_or_doc_dict, "and_or")
 
+# Grab input states to creat dict for graph tree creation
+"""
+def grab_input_states(initial_child_custody, home_section, state, claimant_name, respondent_name)
+    and_dict = {
+        f"{initial_child_custody}" : {'parent' : None},
+        f"{home_section}" : {'parent' : "initial child custody"},
+        f"{home_state} is home state" : {'parent' : "{home_section}"},
+        f"within 6 months" : {'parent' : "{home_state} is home state"}, 
+        f"{claimant_name} is absent from {home_state}" : {'parent' : "within 6 months"}, 
+        f"{child_name} lives in {home_state}" : {'parent' : f"{claimant_name} is absent from {home_state}"}, 
+    }
+"""
 # Boilerplate to run app, debug true if you want to refresh in real time for testing
 def main():
     app.run_server(debug=True)
